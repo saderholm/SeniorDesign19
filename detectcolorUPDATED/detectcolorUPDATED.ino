@@ -1,4 +1,4 @@
-// Senior Design ~ IEEE Robot ~ Color Detection 
+  // Senior Design ~ IEEE Robot ~ Color Detection 
 // Date: January 29, 2019
 // This program identifies color of object from TCS3200 sensor input
 // Optimal range: 2 cm
@@ -59,20 +59,25 @@ void loop() {
     blu = pulseIn(sensorOut, LOW); // Reading BLUE component of color
 
   // RGB frequency range for white
-  if (red < 25  && grn < 25  && blu < 25) {  Serial.println("WHITE"); color = 'W'; }
-
+  if (red < 25  && grn < 25  && blu < 25) {
+    Serial.println("WHITE"); color = 'W';
+  }
   // RGB frequency range for red
-  else if (red > 25 && red < 95   &&  grn > 106 && grn < 165    &&  blu > 71 && blu < 150) {  Serial.println("RED"); color = 'R'; }
-
+  else if (red > 25 && red < 95   &&  grn > 106 && grn < 165    &&  blu > 71 && blu < 150) {
+    Serial.println("RED"); color = 'R'; 
+  }
   // RGB frequency range for green
-  else if (red > 43 && red < 80   &&  grn > 24 && grn < 124    &&  blu > 48 && blu < 128) {  Serial.println("GREEN"); color = 'G'; }
-
+  else if (red > 43 && red < 80   &&  grn > 24 && grn < 124    &&  blu > 48 && blu < 128) {  
+    Serial.println("GREEN"); color = 'G'; 
+  }
   // RGB frequency range for yellow
-  else if (red > 16 && red < 75   &&  grn > 23 && grn < 127    &&  blu > 42 && blu < 129) {  Serial.println("YELLOW"); color = 'Y'; }
-
+  else if (red > 16 && red < 75   &&  grn > 23 && grn < 127    &&  blu > 42 && blu < 129) {  
+    Serial.println("YELLOW"); color = 'Y'; 
+  }
   // RGB frequency range for BLUE
-  else if (red > 62 && red < 89  &&  grn > 28 && grn < 140   &&  blu > 21 && blu < 134) {  Serial.println("BLUE"); color = 'B'; }
-
+  else if (red > 62 && red < 89  &&  grn > 28 && grn < 140   &&  blu > 21 && blu < 134) { 
+    Serial.println("BLUE"); color = 'B'; 
+  }
   else { Serial.println("CARPET"); color = 'C'; }
 
  unsigned long currentmil = millis(); 
